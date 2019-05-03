@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>H&H</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	<link rel="stylesheet" type="text/css" href="css/animationsDanielEden.css">
+	<!-- JavaScript -->
+	<script type="text/javascript" src="js/myJavaScript.js"></script>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<!-- FAVICON -->
+	<link rel="SHORTCUT ICON" href="images/sun.png" type="image/x-icon" />
+	<!-- fonts -->
+	<link href="http://bg.allfont.net/allfont.css?fonts=avanti" rel="stylesheet" type="text/css" />
+	<link href="http://bg.allfont.net/allfont.css?fonts=avanti-italic" rel="stylesheet" type="text/css" />
+	<link href="http://bg.allfont.net/allfont.css?fonts=avanti-bold" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+	 <!-- jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- Preloader -->
+	<script type="text/javascript">
+        $(window).on('load', function() {
+          $('#status').fadeOut();
+          $('#preloader').delay(550).fadeOut('slow');
+          $('body').delay(550).css;
+        })
+	</script>
+</head>
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+    <div id="status">&nbsp;</div>
+	</div>
+	<div id="orangeLine"></div>
+	
+	<div id="iBg1">
+		<img id="moveBG" src="images/4.jpg">
+	</div>
+	<div id="account">
+		<img id="userIcon" src="images/user-icon.png" onclick="accountInfo();">	
+		<div id="account-info" style="display: none;">
+			<p>
+				Потребителско име(login): <br />
+				<input type="text" name="nickname">
+			</p>
+		</div>
+	</div>
+	<!-- NAVBAR -->
+	<div id="navbar">
+		<div onclick="hideNav();" id="hideNav"> 
+			<img src="images/leftArrow.png" class="navImg">
+		</div>
+		<div onclick="showNav();" id="showNav"> 
+			<img src="images/rightArrow.png" class="navImg">
+		</div>
+			<ul class="buttons">
+				<li id="a1">
+					<span class="bot-border1"></span>
+					<a class="a1colorSwap" href="#" onmouseenter="addOrange1();"
+					onmouseleave="removeOrange1();" onclick="getContent11();" style="color: orange;"> Начало </a>
+				</li>
+				<br />
+				<li id="a2">
+					<span class="bot-border2"></span>
+					<a class="a2colorSwap" href="#" onmouseenter="addOrange2();"
+					onmouseleave="removeOrange2();" onclick="getContent22();"> Курсове </a>
+				</li>
+				<li id="a3">
+					<span class="bot-border3"></span>
+					<a class="a3colorSwap" href="#" onmouseenter="addOrange3();"
+					onmouseleave="removeOrange3();" onclick="getContent33();"> Информация </a>
+				</li>
+				<li id="a4">
+					<span class="bot-border4"></span>
+					<a class="a4colorSwap" href="#" onmouseenter="addOrange4();"
+					onmouseleave="removeOrange4();" onclick="getContent44();"> Регистрация </a>
+				</li>
+				<li id="a5">
+					<span class="bot-border5"></span>
+					<a class="a5colorSwap" href="#" onmouseenter="addOrange5();"
+					onmouseleave="removeOrange5();" onclick="accountInfo();">
+					 Моят профил </a>
+				</li>
+			</ul>
+	</div>
+	<div id="logo">
+		<p>	HZ </p>
+		<img src="images/sun.png" class="logoImg">
+	</div>
+	<!-- HOME CONTENT -->
+	<content>
+		<div id="content" class="current">
+			<h2 class="contentWelc"> HZ </h2>
+			<h3 class="contentWelc2"> изгради бъдещето си </h3>
+		</div>
+		<!-- LAYER 1 CONTENT, kursove -->
+		<div id="content2">
+			<h2> Курсове </h2>
+			<div class="hovereffect" id="course_1">
+				<img src="images/courses/white.png">
+					<div class="effect">
+						<h1 class="hoverHeading" style="color: #444;">
+							C++
+						</h1>
+						<p style="color: #444;">
+							Курс по <br />програмиране  на <br />C++ в два етапа - за <br />начинаещи и <br />за напреднали.
+						</p>
+					</div>
+				</div>
+				<div class="hovereffect" style="left: 22.5%;" id="course_2">
+				<img src="images/courses/grey.png">
+					<div class="effect">
+						<h1 class="hoverHeading">
+							Java
+						</h1>
+						<p>
+							Курс по Java <br /> за всеки, който <br />иска да се научи <br />да програмира.
+						</p>
+					</div>
+				</div>
+				<div class="hovereffect" style="left: 47.5%;" id="course_3">
+				<img src="images/courses/orange.png">
+					<div class="effect">
+						<h1 class="hoverHeading" style="font-size: 2vw; color: #444;">
+							HTML, <br />CSS & JS
+						</h1>
+						<p style="color: #444;">
+							Курс по <br />frontend за тези, <br /> които ги вълнува <br />уеб пространството.
+						</p>
+					</div>
+				</div>
+				<div class="hovereffect" style="left: 72.5%;" id="course_4">
+				<img src="images/courses/white.png">
+					<div class="effect">
+						<h1 class="hoverHeading overDo" style="color: #444;">
+							Photoshop
+						</h1>
+						<p style="color: #444; top: 20%;">
+							Курс по <br /> графичен дизайн на <br /> Photoshop. За тези, <br /> които не ги влече <br /> програмирането.
+						</p>
+					</div>
+				</div>
+			
+		</div>
+		<!-- LAYER 2 CONTENT, informaciq -->
+		<div id="content3">
+			<h2> Информация </h2>
+			<div id="containerContacts">
+			<div>
+				<img src="images/contacts/img1.jpg">
+					<br />
+				Христо Николаев Зафиров
+					<br />
+				Тел. 088/245 0423
+					<br />
+				Е-мейл: HristoZafirov96@gmail.com
+					<br />
+				Frontend Developer
+			</div>
+		</div>
+		</div>
+		<!-- LAYER 3 CONTENT, register -->
+		<div id="content4">
+			<h2> Регистрация </h2>
+			<div class="regFieldsBox">
+				<input type="text" 
+					name="firstName" 
+					value="" 
+					placeholder="Име" 
+					size="13" 
+					maxlength="10"
+					class="personalRegFields">
+						
+				<input type="text" 
+				name="secondName" 
+				value="" 
+				placeholder="Презиме" 
+				size="13" 
+				maxlength="10"
+				class="personalRegFields">
+						<br />
+				<input type="text" 
+				name="lastName" 
+				value="" 
+				placeholder="Фамилия" 
+				size="13" 
+				maxlength="10"
+				class="personalRegFields">
+						<br />
+				<input type="text" 
+				name="nickname" 
+				value="" 
+				placeholder="Потребителско име(login)" 
+				size="18" 
+				maxlength="15"
+				class="personalRegFields">
+						<br />
+				<input type="text" 
+				name="email" 
+				value="" 
+				placeholder="E-mail" 
+				size="28" 
+				maxlength="30"
+				class="personalRegFields">
+						<br />
+				<input type="text" 
+				name="phoneNumber" 
+				value="" 
+				placeholder="Телефон" 
+				size="18" 
+				maxlength="15"
+				class="personalRegFields">
+						<br />
+			</div>
+			<div id="firstAdd" class="regFieldsBox2">
+				<input type="text" 
+				name="address1"
+				value=""
+				placeholder="Адрес 1"
+				size="15"
+				maxlength="40"
+				class="personalRegFields" >
+				<input type="text" 
+				name="address2"
+				value=""
+				placeholder="Адрес 2"
+				size="15"
+				maxlength="40"
+				class="personalRegFields" >
+				<input type="text" 
+				name="PK"
+				value=""
+				placeholder="Пощенски код"
+				size="15"
+				maxlength="4"
+				class="personalRegFields" >
+				<input type="text" 
+				name="grad"
+				value=""
+				placeholder="Град"
+				size="15"
+				maxlength="15"
+				class="personalRegFields" >
+				<input type="text" 
+				name="oblast"
+				value=""
+				placeholder="Област"
+				size="15"
+				maxlength="15"
+				class="personalRegFields" >
+				<input type="text" 
+				name="durjava"
+				value=""
+				placeholder="Държава"
+				size="15"
+				maxlength="20"
+				class="personalRegFields" >
+			</div>
+
+			<div id="secondAdd" class="regFieldsBox2">
+				<input type="text" 
+				name="address3"
+				value=""
+				placeholder="Адрес 3 "
+				size="15"
+				maxlength="40"
+				class="personalRegFields" >
+				<input type="text" 
+				name="address4"
+				value=""
+				placeholder="Адрес 4"
+				size="15"
+				maxlength="40"
+				class="personalRegFields" >
+				<input type="text" 
+				name="PK2"
+				value=""
+				placeholder="Пощенски код"
+				size="15"
+				maxlength="4"
+				class="personalRegFields" >
+				<input type="text" 
+				name="grad2"
+				value=""
+				placeholder="Град"
+				size="15"
+				maxlength="15"
+				class="personalRegFields" >
+				<input type="text" 
+				name="oblast2"
+				value=""
+				placeholder="Област"
+				size="15"
+				maxlength="15"
+				class="personalRegFields" >
+				<input type="text" 
+				name="durjava2"
+				value=""
+				placeholder="Държава"
+				size="15"
+				maxlength="20"
+				class="personalRegFields" >
+			</div>
+
+
+			<div class="commentBox">
+				<textarea 
+				rows="3" 
+				cols="30" 
+				placeholder="Бележка"
+				name="comment1"></textarea>
+			</div>
+			<div class="commentBox2">
+				<textarea 
+				rows="3" 
+				cols="30" 
+				placeholder="Бележка"
+				name="comment1"></textarea>
+			</div>
+			<div class="commentBox3">
+				<textarea 
+				rows="3" 
+				cols="30" 
+				placeholder="Бележка"
+				name="comment1"></textarea>
+			</div>
+
+			<div class="address_comment_btns">
+				<input type="button" 
+				value="Допълнителен адрес"
+				style="margin-left: 16.6666%;"
+				onclick="swapAddresses();"
+				id="swapAddressButton" 
+				class="firstAddress">
+				<input type="button" 
+				value="Допълнителна бележка"
+				style="margin-left: 58.3333%;"
+				onclick="addComment();" 
+				id="addComment" 
+				class="addSecondComment">
+			</div>
+			<div id="submit">
+				<input type="submit" 
+				name="submit"
+				class="submit"
+				value="Изпрати">
+			</div>
+		</div>
+	</content>
+
+</body>
+</html>
